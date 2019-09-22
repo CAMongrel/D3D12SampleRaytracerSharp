@@ -10,7 +10,7 @@ The basic requirements are the same as in the above mentioned repository:
 - Visual Studio 2019 (the included solution is for 2019, but 2017 likely works as well)
 
 ## Screenshot
-
+![Screenshot](/Screenshots/image.jpg?raw=true)
 
 ## License
 The MIT License (MIT)

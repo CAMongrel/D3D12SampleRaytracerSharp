@@ -1,6 +1,8 @@
 # D3D12 Sample Raytracer in C#
-This project is mostly a line-by-line translation of the sample source code at https://github.com/NVIDIAGameWorks/DxrTutorials/ to C# using Vortice.Windows as the backend.  
+This project is mostly a line-by-line translation of the sample source code at https://github.com/NVIDIAGameWorks/DxrTutorials/ to C# using [Vortice.Windows](https://github.com/amerkoleci/Vortice.Windows) as the backend.  
 It essentially covers part 14 ("Refit") of the sample code, but has some additional changes to make the triangles receive shadows as well.
+
+The only purpose of this code is to get the original sample to work in C#. Therefore, absolutely zero focus was put on code quality, C#-like conventions and so on. Please treat the code as such.
 
 ## Requirements
 The basic requirements are the same as in the above mentioned repository:
@@ -8,6 +10,9 @@ The basic requirements are the same as in the above mentioned repository:
 - Windows 10 RS5 (version 1809)
 - Windows 10 SDK version 1809 (10.0.17763.0)
 - Visual Studio 2019 (the included solution is for 2019, but 2017 likely works as well)
+
+Additionally you'll need:
+- .NET Core 2.2 SDK
 
 ## Screenshot
 ![Screenshot](/Screenshots/image.jpg?raw=true)

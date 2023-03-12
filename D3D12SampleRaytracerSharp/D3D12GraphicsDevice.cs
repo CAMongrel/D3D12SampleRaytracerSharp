@@ -216,7 +216,8 @@ namespace D3D12SampleRaytracerSharp
 
                 var res = D3D12CreateDevice(adapters[i], Vortice.DirectX.Direct3D.FeatureLevel.Level_12_1, out var dev);
                 FeatureDataD3D12Options5 opt5 = dev.CheckFeatureSupport<FeatureDataD3D12Options5>(Vortice.Direct3D12.Feature.Options5);
-                if (opt5.RaytracingTier != RaytracingTier.Tier1_0)
+                if (opt5.RaytracingTier != RaytracingTier.Tier1_0 &&
+                    opt5.RaytracingTier != (RaytracingTier)11)
                 {
                     throw new NotSupportedException("Raytracing not supported");
                 }

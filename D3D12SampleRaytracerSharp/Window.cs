@@ -2,6 +2,7 @@
 // Distributed under the MIT license. See the LICENSE file in the project root for more information.
 
 using D3D12SampleRaytracerSharp.Interop;
+using PInvoke;
 using System;
 using Vortice.Mathematics;
 
@@ -72,7 +73,9 @@ namespace D3D12SampleRaytracerSharp
 
             if (Width > 0 && Height > 0)
             {
-                var rect = new Rect(0, 0, Width, Height);
+                var rect = new RECT();
+                rect.left = x; rect.top = y;
+                rect.right = x + Width; rect.bottom = y + Height;
 
                 // Adjust according to window styles
                 User32.AdjustWindowRectEx(
@@ -81,8 +84,8 @@ namespace D3D12SampleRaytracerSharp
                     false,
                     styleEx);
 
-                windowWidth = rect.Right - rect.Left;
-                windowHeight = rect.Bottom - rect.Top;
+                windowWidth = rect.right - rect.left;
+                windowHeight = rect.bottom - rect.top;
             }
             else
             {
